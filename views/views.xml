@@ -22,12 +22,24 @@
     <field name="view_mode">tree,form</field>
   </record>
 
+  <!-- wizard -->
+  <record model="ir.actions.act_window" id="document_logging.reporting_wizard">
+    <field name="name">Log reporting</field>
+    <field name="res_model">document_logging.report_wizard</field>
+    <field name="view_mode">form</field>
+    <field name="view_id" ref="document_logging.view_document_logging_report_wizard_form" />
+    <field name="target">new</field>
+  </record>
+
   <!-- top menu items -->
   <menuitem id="document_logging_root_menu" name="Document logging" />
 
   <!-- menu categories -->
   <menuitem id="document_logging_sub_menu_log" parent="document_logging_root_menu"
     name="Logging window" action="document_logging.action_window" />
+
+  <menuitem id="document_logging_sub_menu_reporting" parent="document_logging_root_menu"
+    name="Reporting" action="document_logging.reporting_wizard" />
 
   <!-- sub menu categories -->
 

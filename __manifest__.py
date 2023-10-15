@@ -25,6 +25,7 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
+        'wizard/document_logging_report_wizard_view.xml',
         'views/views.xml',
     ],
     # only loaded in demonstration mode
