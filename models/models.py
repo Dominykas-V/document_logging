@@ -1,18 +1,11 @@
 # -*- coding: utf-8 -*-
 
-# from odoo import models, fields, api
+from odoo import models, fields
 
+class document_logging(models.Model):
+    _name = 'document_logging.document_logging'
+    _description = 'Document Logging'
 
-# class document_logging(models.Model):
-#     _name = 'document_logging.document_logging'
-#     _description = 'document_logging.document_logging'
-
-#     name = fields.Char()
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-#
-#     @api.depends('value')
-#     def _value_pc(self):
-#         for record in self:
-#             record.value2 = float(record.value) / 100
+    name = fields.Char()
+    description = fields.Text()
+    company = fields.Many2one('res.company')
