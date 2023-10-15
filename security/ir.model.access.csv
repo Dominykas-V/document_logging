@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_document_logging_document_logging,document_logging.document_logging,model_document_logging_document_logging,base.group_user,1,1,1,1
